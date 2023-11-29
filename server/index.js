@@ -8,7 +8,7 @@ import { isAuthenticated } from "./Authentication/userAuth.js";
 import { getURL } from './Controllers/urls.js';
 
 dotenv.config();
-const PORT = process.env.PORT;
+const port = process.env.PORT || 3000; 
 const app = express(); 
 
 //application middleware 
@@ -42,4 +42,4 @@ app.get('/:urlID', async(req, res)=>{
    }
  })
  
-app.listen(PORT,()=>console.log(`Server started at localhost:${PORT}`))
+app.listen(port,()=>console.log(`Server started at localhost:${port}`))

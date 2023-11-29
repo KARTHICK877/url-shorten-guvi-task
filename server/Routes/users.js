@@ -18,14 +18,18 @@ import nodemailer from "nodemailer";
 const router = express.Router();
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
-    user: "kmass8754@gmail.com",
-    pass: process.env.PASSWORD,
-    
+    user: 'kmass8754@gmail.com', // your Gmail account
+    pass: process.env.PASSWORD, // your Gmail password or App Password
   },
 });
+
 console.log("Password:", process.env.PASSWORD);
+
+export { transporter };
 
 // check if user exists via mail / username
 router.get("/getUser", async (req, res) => {

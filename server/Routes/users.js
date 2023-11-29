@@ -82,9 +82,9 @@ router.post("/signup", async (req, res) => {
       const secret = activationKey;
       const token = generateActivationToken(hashedUser._id, secret);
 
-      const link = `http://localhost:3000/activate/${hashedUser._id}?activateToken=${token}`;
+      const link = `https://url-karthick.onrender.com/${hashedUser._id}?activateToken=${token}`;
       const mailOptions = {
-        from: "kswastic@gmail.com",
+        from: "kmass8754@gmail.com",
         to: hashedUser.email,
         subject: "Account Activation link sent",
         text: `Click on the below link to activate your account. This link is valid for 48 hours after which link will be invalid. ${link}`,
@@ -142,10 +142,10 @@ router.post("/activation", async (req, res) => {
       const secret = activationKey;
       const token = generateActivationToken(user._id, secret);
 
-      const link = `http://localhost:3000/activate/${user._id}?activateToken=${token}`;
+      const link = `https://url-karthick.onrender.com/${user._id}?activateToken=${token}`;
     
       const mailOptions = {
-        from: "kswastic@gmail.com",
+        from: "kmass8754@gmail.com",
         to: user.email,
         subject: "Account Activation link sent",
         text: `Click on the below link to activate your account. This link is valid for 48 hours after which link will be invalid. ${link}`,
@@ -241,10 +241,10 @@ router.post("/forgot-password", async (req, res) => {
     const secret = Math.random().toString(36).substring(2, 11);
     const token = generateToken(user._id, secret);
 
-    const link = `http://localhost:3000/authorize/?id=${user._id}&token=${token}`;
+    const link = `https://url-karthick.onrender.com/?id=${user._id}&token=${token}`;
   
     const mailOptions = {
-      from: "kswastic@gmail.com",
+      from: "kmass8754@gmail.com",
       to: user.email,
       subject: "Password reset link sent",
       text: `Click on the below link to reset your password. This password reset link is valid for 10 minutes after which link will be invalid. ${link}`,

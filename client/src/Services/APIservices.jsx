@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "https://url-shortener-link-backend.onrender.com";
+const BASE_URL = "https://url-karthick.onrender.com";
 // const BASE_URL = "https://url-backend-z3ta.onrender.com";
 
 export const addUser = async (payload) => {

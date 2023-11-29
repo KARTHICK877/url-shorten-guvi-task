@@ -8,7 +8,7 @@ const NameContext = createContext(); //1
 const NameProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState({fname:"", lname:"", email:"", id:""});
   const [isLogged, setIsLogged] = useState(false) 
-  const serverURL = "https://url-shortener-link-backend.onrender.com";
+  const serverURL = "https://url-karthick.onrender.com";
   // const serverURL = "https://url-backend-z3ta.onrender.com";
 
   return (

@@ -22,8 +22,10 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: "kmass8754@gmail.com",
     pass: process.env.PASSWORD,
+    
   },
 });
+console.log("Password:", process.env.PASSWORD);
 
 // check if user exists via mail / username
 router.get("/getUser", async (req, res) => {
